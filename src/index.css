@@ -1,0 +1,132 @@
+/* src/index.css (or src/globals.css) */
+
+@import "tailwindcss";
+
+/* You can add your own custom CSS rules here as well */
+
+
+@layer components {
+  .card {
+    @apply p-6 bg-white rounded-lg shadow-md;
+  }
+}
+
+
+@import url("https://fonts.cdnfonts.com/css/general-sans");
+
+
+body {
+  width: 100dvw;
+  overflow-x: hidden;
+  background-color: #dfdff0;
+  font-family: "General Sans", sans-serif;
+}
+
+@layer base {
+  @apply text-gray-900 bg-white dark:text-gray-100 dark:bg-gray-900;
+
+  @font-face {
+    font-family: 'circularweb-book';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/circularweb-book.woff2') format('woff2'),
+         url('/fonts/circularweb-book.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'general';
+    font-style: normal;
+    font-weight: 500;
+    src: url('/fonts/general.woff2') format('woff2'),
+          url('/fonts/general.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'robert-medium';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/fonts/robert-medium.woff2') format('woff2'),
+          url('/fonts/robert-medium.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'robert-regular';
+    font-style: normal;
+    font-weight: 900;
+    src: url('/fonts/robert-regular.woff2') format('woff2'),
+          url('/fonts/robert-regular.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'zentry-regular';
+    font-style: normal; 
+    font-weight: 400;
+    src: url('/fonts/zentry-regular.woff2') format('woff2'),
+          url('/fonts/zentry-regular.woff') format('woff');
+  }
+
+}
+
+@theme{
+  --font-circularweb-book: 'circularweb-book', sans-serif;
+  --font-general: 'general', sans-serif;
+  --font-robert-medium: 'robert-medium', sans-serif;
+  --font-robert-regular: 'robert-regular', sans-serif;
+  --font-zentry-regular: 'zentry-regular', sans-serif;
+}
+
+
+
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  /* color: #646cff; */
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@import './styles/utilities.css';
+@import './styles/components.css';
+@import './styles/global.css'; /* for animations and other global styles */
